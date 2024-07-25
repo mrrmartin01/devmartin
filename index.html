@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>mrrmartin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("I-h814b6T9WzwGHOJ");
+      })();
+    </script>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+      <header id="header">
+        <div class="logo">
+          <span class="icon fa-gem"></span>
+        </div>
+        <div class="content">
+          <div class="inner">
+            <h1>Hello!</h1>
+            <p>
+              I'm Theophilus Martin, a frontend developer and a project manager. I specialize in React, React Native and fullstack development with NextJS.
+              <p/>
+              Explore my work to see how I bring innovative ideas to life through cutting edge technology
+            </p>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div id="main">
+        <article id="intro">
+          <h2 class="major">Intro</h2>
+          <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+          <p>
+             <a href="#work">Cool stuff</a>.
+          </p>
+          <p>
+            I specialize in creating responsive and engaging web experiences that not only look great 
+            but also feel great to use. Whether it&apos;s a sleek landing page or a dynamic web app, 
+            I&apos;m all about making the web a more delightful place.
+            <br/>
+            I believe that great design is not just about aesthetics; it&apos;s 
+            about creating seamless interactions that enhance user experience. 
+            My mission is to bridge the gap between creativity and functionality, 
+            ensuring that every project I work on is not only visually appealing 
+            but also intuitive and accessible.
+          </p>
+        </article>
+
+        <article id="work">
+          <h2 class="major">Work</h2>
+          <span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+          <p>
+            My aim is to deliver high-quality work that not only meets but exceeds 
+            client expectations. I take pride in my ability to balance aesthetics with 
+            performance, ensuring that every website I create is fast, responsive, and 
+            user-friendly. Feel free to adjust any sections to better fit your personal 
+            style and work philosophy!
+          </p>
+          <p>
+            Every project comes with its own set of challenges, and I thrive on solving 
+            problems. I approach obstacles with a positive attitude, viewing them as 
+            opportunities to innovate and improve. My goal is to create seamless experiences 
+            that delight users and exceed expectations.
+          </p>
+        </article>
+
+        <article id="about">
+          <h2 class="major">About</h2>
+          <span class="image main"><video src="images/freestyle.mp4" controls autoplay muted loop alt="" /></span>
+          <p>
+            The tech world is always evolving, and so am I! I&apos;m passionate about 
+            staying up-to-date with the latest trends and technologies in frontend development. 
+            Whether it&apos;s exploring new frameworks or diving into design principles, 
+            I&apos;m committed to continuous learning and growth.
+          </p>
+        </article>
+
+        <article id="contact">
+          <h2 class="major">Contact</h2>
+          <form id="contact-form">
+            <div class="fields">
+              <div class="field half">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="field half">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li>
+                <button type="submit" class="primary">Send Message</button>
+              </li>
+              <li><input type="reset" value="Reset" /></li>
+            </ul>
+          </form>
+          <ul class="icons">
+            <li>
+              <a href="https://www.linkedin.com/in/theophilus-martin-73003a24a/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a>
+            </li>
+            <li>
+              <a href="https://github.com/mrrmartin01" class="icon brands fa-github"><span class="label">GitHub</span></a>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <footer id="footer">
+        <p class="copyright">
+          &copy;<a href="https://github.com/mrrmartin01">mrrmartin</a>.
+        </p>
+      </footer>
+    </div>
+
+    <div id="bg"></div>
+
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let params = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          message: document.getElementById('message').value
+        };
+
+        emailjs.send("service_i12a37l", "template_g02etuk", params)
+          .then(response => {
+            console.log("Email sent successfully!", response.status, response.text);
+            alert("Email Sent!");
+          })
+          .catch(error => {
+            console.error("Failed to send email.", error);
+            alert("Failed to send email. Please try again later.");
+          });
+      });
+    </script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
